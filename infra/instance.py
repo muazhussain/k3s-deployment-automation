@@ -1,15 +1,10 @@
 import pulumi_aws.ec2 as ec2
 
-class Instances:
+class Instance:
+    """
+    Create the EC2 instances for the cluster.
+    """
     def __init__(self, config, network, security):
-        """
-        Initialize the instances.
-
-        :param config: The configuration for the instances
-        :param network: The network to create the instances in
-        :param security: The security group to assign to the instances
-        :return: None
-        """
         self.config = config
         self.network = network
         self.security = security

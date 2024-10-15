@@ -2,14 +2,10 @@ import os
 import pulumi_aws as aws
 
 class Security:
+    """
+    Create the security group and key pair for the instances.
+    """
     def __init__(self, config, vpc_id):
-        """
-        Initialize the security group and key pair.
-
-        :param config: The configuration for the instances
-        :param vpc_id: The ID of the VPC
-        :return: None
-        """
         self.config = config
         self.security_group = self._create_security_group(vpc_id)
         self.key_pair = self._create_key_pair()
