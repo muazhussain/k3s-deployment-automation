@@ -20,8 +20,8 @@ def main():
     # Output the instance public IP addresses
     pulumi.export('git_runner_public_ip', instance.git_runner.public_ip)
     pulumi.export('master_private_ip', instance.master.private_ip)
-    pulumi.export('worker-1_private_ip', instance.workers[0].private_ip)
-    pulumi.export('worker-2_private_ip', instance.workers[1].private_ip)
+    pulumi.export('worker_1_private_ip', instance.workers[0].private_ip)
+    pulumi.export('worker_2_private_ip', instance.workers[1].private_ip)
 
 if __name__ == '__main__':
     main()
